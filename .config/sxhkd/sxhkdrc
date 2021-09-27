@@ -1,0 +1,9 @@
+Print
+    scrot 
+
+super + KP_Subtract
+    sh -c "pactl set-sink-volume 0 -5%"
+
+super + KP_Add
+    sh -c "pactl set-sink-volume 0 +5%"
+
