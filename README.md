@@ -1,53 +1,38 @@
-# David-Dotfiles
+# Dotfiles
 Personal dotfiles of my Arch Linux setup for backup purposes and my own future reference.
 This repo also includes the commands to install the specified packages, for Arch based distros.
 
-## .config
-This folder contains config files for some Linux applications, including:
+For short, Dotfiles are text-based configuration files of Unix based systems. They can be used to customize your Linux installation.
 
-### Neofetch
-A simple program that displays useful system info.
+## Why do this repository exists?
 
-Installation: pacman -S neofetch
+- I can use it as a backup, if needed;
+- I can use it as a way of learning git;
+- I can use it to easily share my dotfiles with other people;
 
-### Neovim
-A fork of Vim, a powerfull and extensible text editor, made even better by the lua integration and improved codebase.
+## Softwares that I use in my Linux installation
 
-Installation: pacman -S neovim
-
-### Qbittorrent
-A great free and open source torrent client.
-
-Installation: pacman -S qbittorrent
-
-### Qutebrowser
-A keyboard-focused web browser written in python that aims to be simple and lightweight, especially good for Vim enthusiasts.
-
-Installation: pacman -S qutebrowser
-
-### Ranger
-A terminal file manager written in Python, featuring vi-style key bidings, tabs and several other features.
-
-Installation: pacman -S ranger
-
-### Sxhkd
-A simple and lightweight hotkey daemon for Xorg. Very useful when used alongside with Window managers that aim for simplicity and minimalism, like dwm or bspwm.
-
-Installation: pacman -S sxhkd
-
-### Zathura
+- Display server: [X server](https://www.x.org/wiki/)
+The most popular display manager in Linux. It works very well overall, but I'm planning to try out wayland too.
+- Window manager: [Dinamyc Window Manager](https://dwm.suckless.org/)
+A simple window manager written in C. The reason why I started using DWM was to pratice my C programming, since the only way to configure it is by editting the source code. But it ended up becoming my favorite Window manager.
+- Terminal emulator: [Simple Terminal](https://st.suckless.org/)
+It follows the same idea of DWM, it aims to be simple, fast and extensible by edditing the source code, that is written in C.
+- Terminal shell: [Zshell](https://www.zsh.org/)
+A very good middle ground between more raw shells like bash and friendly shells like fish. Also highly customizable due the great variety of plugins.
+- Music player (backend): [Music Player Daemon](https://musicpd.org/)
+A simple and flexible backend for playing music on Linux.
+- Music player (frontend): [NCurses Music Player Client Plus Plus](https://github.com/ncmpcpp/ncmpcpp)
+A terminal frontend for playing music with MPD, it is lightweight and it has a various features.
+- Video player: [mpv](https://mpv.io/)
+A free and open source video player.
+- Document viewer: [zathura](https://pwmt.org/projects/zathura/)
 A minimalistic and customizable document viewer. It can support different file formats through plugins.
+- Text editor: [Neovim](https://neovim.io/)
+A fork of Vim, a powerfull and extensible text editor, made even better by the lua integration and improved codebase.
+- Editor colorscheme:[Gruvbox](https://github.com/morhetz/gruvbox)
+A pleasant for the eyes and warm colorscheme, great for long sessions of programming.
 
-Installation: pacman -S zathura zathura-pdf-poppler
+## Contact
 
-## .dwm
-In this folder there is a shellscript to autostart some programs alongside the Dynamic Window Manager.
-
-## .Xresources
-Set parameters for some Xorg applications, like terminal colors, cursor theme and etc.
-
-## .xinitrc
-Launch applications during the initialization of the X server.
-
-
-
+Feel free to leave suggestions or report problems through the [Issue section](https://github.com/David-MoreiraJ/David-Dotfiles/issues), and many thanks for taking your time to reading this far!
