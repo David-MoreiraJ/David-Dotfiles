@@ -1,2 +1,4 @@
 # David-Dotfiles
-Personal dotfiles for backup purposes.
+Personal dotfiles of my Arch Linux setup for backup purposes.
+
+
