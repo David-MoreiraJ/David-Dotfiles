@@ -22,7 +22,7 @@ A simple window manager written in C. The reason why I started using DWM was to 
 
 - Terminal emulator: [Simple Terminal](https://st.suckless.org/)
 
-It follows the same idea of DWM, it aims to be simple, fast and extensible by edditing the source code, that is written in C.
+It follows the same idea as DWM, it aims to be simple, fast and extensible by edditing the source code, that is written in C.
 
 - Terminal shell: [Zshell](https://www.zsh.org/)
 
@@ -34,7 +34,7 @@ A simple and flexible backend for playing music on Linux.
 
 - Music player (frontend): [NCurses Music Player Client Plus Plus](https://github.com/ncmpcpp/ncmpcpp)
 
-A terminal frontend for playing music with MPD, it is lightweight and it has a various features.
+A terminal frontend for playing music with MPD. It is lightweight and it has various features.
 
 - Video player: [mpv](https://mpv.io/)
 
