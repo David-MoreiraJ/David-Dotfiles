@@ -1,65 +1,76 @@
-!  ███▄ ▄███▓ █    ██ ▄▄▄█████▓ ██▓ ███▄    █▓██   ██▓
-! ▓██▒▀█▀ ██▒ ██  ▓██▒▓  ██▒ ▓▒▓██▒ ██ ▀█   █ ▒██  ██▒
-! ▓██    ▓██░▓██  ▒██░▒ ▓██░ ▒░▒██▒▓██  ▀█ ██▒ ▒██ ██░
-! ▒██    ▒██ ▓▓█  ░██░░ ▓██▓ ░ ░██░▓██▒  ▐▌██▒ ░ ▐██▓░
-! ▒██▒   ░██▒▒▒█████▓   ▒██▒ ░ ░██░▒██░   ▓██░ ░ ██▒▓░
-! ░ ▒░   ░  ░░▒▓▒ ▒ ▒   ▒ ░░   ░▓  ░ ▒░   ▒ ▒   ██▒▒▒
-! ░  ░      ░░░▒░ ░ ░     ░     ▒ ░░ ░░   ░ ▒░▓██ ░▒░
-! ░      ░    ░░░ ░ ░   ░       ▒ ░   ░   ░ ░ ▒ ▒ ░░
-!        ░      ░               ░           ░ ░ ░
-!                                             ░ ░
-! urxvt
-URxvt*buffered: true
-URxvt*cursorBlink: true
-URxvt*underlineColor: yellow
-URxvt*font: xft: creep:style=Regular
-URxvt*boldFont: xft: creep:style=Regular
-URxvt*depth: 32
-URxvt.background: [75]#282828
-URxvt*borderless: 1
-URxvt*scrollBar: false
-URxvt*loginShell: true
-Urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
-URxvt*saveLines: 5000
-URxvt*termName: rxvt-unicode
-URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: firefox
-URxvt.matcher.button: 1
+! =============================================================
+!| ▓█████▄  ▄▄▄    ██▒   █▓ ██▓▓█████▄                        |
+!| ▒██▀ ██▌▒████▄ ▓██░   █▒▓██▒▒██▀ ██▌   +-+-+-+-+-+-+-+-+   |
+!| ░██   █▌▒██  ▀█▄▓██  █▒░▒██▒░██   █▌  <|D|O|T|F|I|L|E|S|>  |
+!| ░▓█▄   ▌░██▄▄▄▄██▒██ █░░░██░░▓█▄   ▌   +-+-+-+-+-+-+-+-+   |
+!| ░▒████▓  ▓█   ▓██▒▒▀█░  ░██░░▒████▓                        |
+!|  ▒▒▓  ▒  ▒▒   ▓▒█░░ ▐░  ░▓   ▒▒▓  ▒                        |
+!|  ░ ▒  ▒   ▒   ▒▒ ░░ ░░   ▒ ░ ░ ▒  ▒                        |
+!|  ░ ░  ░   ░   ▒     ░░   ▒ ░ ░ ░  ░                        |
+!|    ░          ░  ░   ░   ░     ░                           |
+!|  ░                  ░        ░                             |
+!|  ███▄ ▄███▓ ▒█████   ██▀███  ▓█████  ██▓ ██▀███   ▄▄▄      |
+!| ▓██▒▀█▀ ██▒▒██▒  ██▒▓██ ▒ ██▒▓█   ▀ ▓██▒▓██ ▒ ██▒▒████▄    |
+!| ▓██    ▓██░▒██░  ██▒▓██ ░▄█ ▒▒███   ▒██▒▓██ ░▄█ ▒▒██  ▀█▄  |
+!| ▒██    ▒██ ▒██   ██░▒██▀▀█▄  ▒▓█  ▄ ░██░▒██▀▀█▄  ░██▄▄▄▄██ |
+!| ▒██▒   ░██▒░ ████▓▒░░██▓ ▒██▒░▒████▒░██░░██▓ ▒██▒ ▓█   ▓██▒|
+!| ░ ▒░   ░  ░░ ▒░▒░▒░ ░ ▒▓ ░▒▓░░░ ▒░ ░░▓  ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░|
+!| ░  ░      ░  ░ ▒ ▒░   ░▒ ░ ▒░ ░ ░  ░ ▒ ░  ░▒ ░ ▒░  ▒   ▒▒ ░|
+!| ░      ░   ░ ░ ░ ▒    ░░   ░    ░    ▒ ░  ░░   ░   ░   ▒   |
+!|        ░       ░ ░     ░        ░  ░ ░     ░           ░  ░|
+!|============================================================= 
 
-! port_royal
+!! URxvt
+URxvt.font: xft:Hack:style=Regular:size=8
+URxvt.boldFont: xft:Hack:style=Bold:size=8
+URxvt.italicFont: xft:Hack:style=Italic:size=8
+URxvt.boldItalicfont: xft:Hack:style=Bold Italic:size=8
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 76x21
+!URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+!URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
+
 ! special
-*.foreground:   #dedede
-*.background:   #181818
-*.cursorColor:  #dedede
+*.foreground:   #ffdbb0
+*.background:   #060a0c
+*.cursorColor:  #ffdbb0
 
 ! black
-*.color0:       #38393a
-*.color8:       #525252
+*.color0:       #060a0c
+*.color8:       #0d161b
 
 ! red
-*.color1:       #894747
-*.color9:       #c26862
+*.color1:       #fe5e41
+*.color9:       #fe7f69
 
 ! green
-*.color2:       #c5a85e
-*.color10:      #dfba6f
+*.color2:       #b1cc72
+*.color10:      #c0d68d
 
 ! yellow
-*.color3:       #528f9e
-*.color11:      #6baec1
+*.color3:       #ffac54
+*.color11:      #ffbc74
 
 ! blue
-*.color4:       #63757f
-*.color12:      #7397a1
+*.color4:       #72c2d6
+*.color12:      #8dcede
 
 ! magenta
-*.color5:       #864049
-*.color13:      #a3535e
+*.color5:       #ed7782
+*.color13:      #f1939c
 
 ! cyan
-*.color6:       #aa904d
-*.color14:      #c9b06a
+*.color6:       #8dd1b9
+*.color14:      #a2dac6
 
 ! white
-*.color7:       #dedede
-*.color15:      #d1cbb1
+*.color7:       #d9bb96
+*.color15:      #ffdbb0
