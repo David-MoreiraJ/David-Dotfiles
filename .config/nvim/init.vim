@@ -1,4 +1,4 @@
-" =============================================================
+"==============================================================
 "| ▓█████▄  ▄▄▄    ██▒   █▓ ██▓▓█████▄                        |
 "| ▒██▀ ██▌▒████▄ ▓██░   █▒▓██▒▒██▀ ██▌   +-+-+-+-+-+-+-+-+   |
 "| ░██   █▌▒██  ▀█▄▓██  █▒░▒██▒░██   █▌  <|D|O|T|F|I|L|E|S|>  |
@@ -18,17 +18,25 @@
 "| ░  ░      ░  ░ ▒ ▒░   ░▒ ░ ▒░ ░ ░  ░ ▒ ░  ░▒ ░ ▒░  ▒   ▒▒ ░|
 "| ░      ░   ░ ░ ░ ▒    ░░   ░    ░    ▒ ░  ░░   ░   ░   ▒   |
 "|        ░       ░ ░     ░        ░  ░ ░     ░           ░  ░|
-"|============================================================= 
+"============================================================== 
+
+"""""""""""""""""""""""""""""""""""""""
+" Plugin calls                        "
+"""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'ap/vim-css-color'
-Plug 'itchyny/lightline.vim'
-Plug 'KeitaNakamura/neodark.vim'
-Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons'
+Plug 'morhetz/gruvbox' 
 
 call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""
+" VIM Config                          "
+"""""""""""""""""""""""""""""""""""""""
 
 syntax enable
 
@@ -45,27 +53,19 @@ set clipboard=unnamedplus
 set scrolloff=4
 
 """""""""""""""""""""""""""""""""""""""
-" NERDTree
+" NERDTree                            "
 """""""""""""""""""""""""""""""""""""""
-
 nnoremap <f2> :NERDTreeToggle <cr>
-let g:NERDTreeDirArrowExpandable = '>>'
-let g:NERDTreeDirArrowCollapsible = 'V'
 let g:NERDTreeMinimalUI = 1
-
 """""""""""""""""""""""""""""""""""""""
-" PowerLine
+" Airline                             "
 """""""""""""""""""""""""""""""''""""""
-
-let g:lightline = {
-    \ 'colorscheme': 'seoul256',
-    \}
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 """"""""""""""""""""""""""""""""""""""
-" Colorscheme
+" Colorscheme                        "
 """"""""""""""""""""""""""""""""""""""
-
-colorscheme gruvbox
 set background=dark
-
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
 """"""""""""""""""""""""""""""""""""""
-
