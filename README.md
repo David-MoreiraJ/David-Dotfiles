@@ -50,10 +50,10 @@ A minimalistic and customizable document viewer. It can support different file f
 
 A fork of Vim, a powerfull and extensible text editor, made even better by the lua integration and improved codebase.
 
-- Editor colorscheme:[Gruvbox](https://github.com/morhetz/gruvbox)
+- Editor colorscheme: [Gruvbox](https://github.com/morhetz/gruvbox)
 
-A pleasant for the eyes and warm colorscheme, great for long sessions of programming.
+A pleasant for the eyes and warm colorscheme, great for long sessions of programming. Sometimes I also use my .Xresouces colorscheme as Vim theme.
 
 ## Contact
 
-Feel free to leave suggestions or report problems through the [Issue section](https://github.com/David-MoreiraJ/David-Dotfiles/issues), and many thanks for taking your time to reading this far!
+Feel free to leave suggestions or report problems through the [Issue section](https://github.com/David-MoreiraJ/David-Dotfiles/issues), and many thanks for taking your time to read this far!
