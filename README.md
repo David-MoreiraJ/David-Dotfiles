@@ -1,4 +1,7 @@
 # Dotfiles
+
+![](Images/DavidPrint1.png)
+
 Personal dotfiles of my Arch Linux setup for backup purposes and my own future reference.
 
 For short, Dotfiles are text-based configuration files of Unix based systems. They can be used to customize your Linux installation.
