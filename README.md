@@ -1,6 +1,9 @@
 # Dotfiles
-
+My current Arch Linux installation:
 ![](Images/DavidPrint1.png)
+
+Old Artix Linux setup, back when I was trying out different init systems:
+![](Images/DavidPrint2.png)
 
 Personal dotfiles of my Arch Linux setup for backup purposes and my own future reference.
 
