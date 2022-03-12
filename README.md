@@ -5,7 +5,7 @@ My current Arch Linux installation:
 Old Artix Linux setup, back when I was trying out different init systems:
 ![](Images/DavidPrint2.png)
 
-Personal dotfiles of my Arch Linux setup for backup purposes and my own future reference.
+This repo contains personal dotfiles of my Arch Linux setup for backup purposes and my own future reference.
 
 For short, Dotfiles are text-based configuration files of Unix based systems. They can be used to customize your Linux installation.
 
