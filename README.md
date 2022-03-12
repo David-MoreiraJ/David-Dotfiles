@@ -24,7 +24,7 @@ A simple window manager written in C. The reason why I started using DWM was to 
 
 - Terminal emulator: [Simple Terminal](https://st.suckless.org/)
 
-It follows the same idea as DWM, it aims to be simple, fast and extensible by edditing the source code, that is written in C.
+It follows the same idea as DWM, it aims to be simple, fast and extensible by edditing the source code, that is written in C. This specific version of ST is a fork of [Luke's build of st](https://github.com/LukeSmithxyz/st).
 
 - Terminal shell: [Zshell](https://www.zsh.org/)
 
