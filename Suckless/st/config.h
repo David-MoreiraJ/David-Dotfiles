@@ -9,15 +9,15 @@
 static char *font = "Hack-Regular:pixelsize=10:antialias=true:autohint=true:style=Regular";
 static char *font2[] = { "Hack-Regular:pixelsize=10:antialias=true:autohint=true:style=Regular" };
 static int borderpx = 2;
-*/
-static char *font = "Inconsolata Nerd Font:antialias=true:autohint=true:pixelsize=12:style=Medium";
-static char *font2[] = { "Inconsolata Nerd Font:pixelsize=12:antialias=true:autohint=true:style=Medium" };
-static int borderpx = 2;
-/*
-static char *font = "creep:pixelsize=16:style=Regular";
-static char *font2[] = { "creep:pixelsize=16:style=Regular" };
+
+static char *font = "lemon-j:pixelsize=11:style=Regular";
+static char *font2[] = { "lemon-j:pixelsize=11:style=Regular" };
 static int borderpx = 2;
 */
+static char *font = "JetBrainsMono Nerd Font:pixelsize=11:antialias=true:autohint=true:style=Regular";
+static char *font2[] = { "JetBrainsMono Nerd Font:pixelsize=11:antialias=true:autohint=true:style=Regular" };
+static int borderpx = 2;
+
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -116,7 +116,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 1.0;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
