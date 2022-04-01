@@ -1,55 +1,59 @@
-/* See LICENSE file for copyright and license details. 
- =============================================================
-| ▓█████▄  ▄▄▄    ██▒   █▓ ██▓▓█████▄                        |
-| ▒██▀ ██▌▒████▄ ▓██░   █▒▓██▒▒██▀ ██▌   +-+-+-+-+-+-+-+-+   |
-| ░██   █▌▒██  ▀█▄▓██  █▒░▒██▒░██   █▌  <|D|O|T|F|I|L|E|S|>  |
-| ░▓█▄   ▌░██▄▄▄▄██▒██ █░░░██░░▓█▄   ▌   +-+-+-+-+-+-+-+-+   |
-| ░▒████▓  ▓█   ▓██▒▒▀█░  ░██░░▒████▓                        |
-|  ▒▒▓  ▒  ▒▒   ▓▒█░░ ▐░  ░▓   ▒▒▓  ▒                        |
-|  ░ ▒  ▒   ▒   ▒▒ ░░ ░░   ▒ ░ ░ ▒  ▒                        |
-|  ░ ░  ░   ░   ▒     ░░   ▒ ░ ░ ░  ░                        |
-|    ░          ░  ░   ░   ░     ░                           |
-|  ░                  ░        ░                             |
-|  ███▄ ▄███▓ ▒█████   ██▀███  ▓█████  ██▓ ██▀███   ▄▄▄      |
-| ▓██▒▀█▀ ██▒▒██▒  ██▒▓██ ▒ ██▒▓█   ▀ ▓██▒▓██ ▒ ██▒▒████▄    |
-| ▓██    ▓██░▒██░  ██▒▓██ ░▄█ ▒▒███   ▒██▒▓██ ░▄█ ▒▒██  ▀█▄  |
-| ▒██    ▒██ ▒██   ██░▒██▀▀█▄  ▒▓█  ▄ ░██░▒██▀▀█▄  ░██▄▄▄▄██ |
-| ▒██▒   ░██▒░ ████▓▒░░██▓ ▒██▒░▒████▒░██░░██▓ ▒██▒ ▓█   ▓██▒|
-| ░ ▒░   ░  ░░ ▒░▒░▒░ ░ ▒▓ ░▒▓░░░ ▒░ ░░▓  ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░|
-| ░  ░      ░  ░ ▒ ▒░   ░▒ ░ ▒░ ░ ░  ░ ▒ ░  ░▒ ░ ▒░  ▒   ▒▒ ░|
-| ░      ░   ░ ░ ░ ▒    ░░   ░    ░    ▒ ░  ░░   ░   ░   ▒   |
-|        ░       ░ ░     ░        ░  ░ ░     ░           ░  ░|
-|=============================================================*/
+/* See LICENSE file for copyright and license details. */
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "creep:size=11" };
-static const char dmenufont[]       = "creep:size=11";
-static const char col_gray1[]       = "#000000";
-static const char col_gray2[]       = "#cb6c4b";
-static const char col_gray3[]       = "#ffffff";
-static const char col_gray4[]       = "#000000";
-static const char col_cyan[]        = "#cb6c4b";
-static const unsigned int baralpha = OPAQUE;
-static const unsigned int borderalpha = OPAQUE;
+static const unsigned int colorfultag = 1; /* 0 means use SchemeSel for selected tag */
+static const int vertpad            = 0;       /* vertical padding of bar */
+static const int sidepad            = 0;       /* horizontal padding of bar */
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Bold:size=9:antialias=true", "Material Design Icons:Regular:size=11:antialias=true" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:style=Bold:size=9";
+static const char col_gray1[]       = "#1E1E2E";
+static const char col_gray2[]       = "#1E1E2E";
+static const char col_gray3[]       = "#D9E0EE";
+static const char col_gray4[]       = "#D9E0EE";
+static const char col_cyan[]        = "#1E1E2E";
+static const char gray3[]           = "#606672";
+static const char black[]           = "#1E1E2E"; /* tags background */
+static const char red[]             = "#F28FAD";
+static const char green[]           = "#ABE9B3";
+static const char yellow[]          = "#FAE3B0";
+static const char blue[]            = "#96CDFB";
+static const char purple[]          = "#DDB6F2";
+static const char pink[]            = "#89DCEB";
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-};
-static const unsigned int alphas[][3]      = {
-   /*               fg      bg        border     */
-   [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-   [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]     = { col_gray4, col_cyan,  col_cyan  },
+    [SchemeTag]        = { gray3, black, black },
+    [SchemeTag1]       = { red,  black, black },
+    [SchemeTag2]       = { green,   black, black },
+    [SchemeTag3]       = { yellow, black,black },
+    [SchemeTag4]       = { blue, black, black },
+    [SchemeTag5]       = { purple,  black, black },
+    [SchemeTag6]       = { red,  black, black },
+    [SchemeTag7]       = { green,   black, black },
+    [SchemeTag8]       = { yellow, black,black },
+    [SchemeTag9]       = { blue, black, black },
+    [SchemeLayout]     = { green, black, black },
 };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
+static const int tagschemes[] = { SchemeTag1, SchemeTag2, SchemeTag3,
+                                  SchemeTag4, SchemeTag5, SchemeTag6,
+                                  SchemeTag7, SchemeTag8, SchemeTag9
+};
+
+static const unsigned int ulinepad	= 5;	/* horizontal padding between the underline and tag */
+static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
+static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
+static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -57,21 +61,21 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "URxvt",    NULL,       NULL,       0,            1,           -1 },
-	{ "St",	      NULL,       NULL,       0,            1,           -1 },
-	{ "librewolf",NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "St",       NULL,       NULL,       0,            1,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "󰙀",      tile },    /* first entry is default */
+	{ "󱂬",      NULL },    /* no layout function means floating behavior */
+	{ "󱁵",      monocle },
 };
 
 /* key definitions */
@@ -88,11 +92,12 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *roficmd[] = { "rofi", "-show", "run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_space,  spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -104,9 +109,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_z,      zoom,           {0} },
 	{ MODKEY,                       XK_p,      view,           {0} },
 	{ MODKEY,                       XK_w,      killclient,     {0} },
-	{ MODKEY,                       XK_t      ,setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f      ,setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m      ,setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_Tab,    setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_Tab,    togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -118,15 +123,15 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-	TAGKEYS(                        XK_KP_End,                 0)
-	TAGKEYS(                        XK_KP_Down,                1)
-	TAGKEYS(                        XK_KP_Page_Down,           2)
-	TAGKEYS(                        XK_KP_Left,                3)
-	TAGKEYS(                        XK_KP_Begin,               4)
-	TAGKEYS(                        XK_KP_Right,               5)
-	TAGKEYS(                        XK_KP_Home,                6)
-	TAGKEYS(                        XK_KP_Up,                  7)
-	TAGKEYS(                        XK_KP_Page_Up,             8)
+	TAGKEYS(                        XK_1,                      0)
+	TAGKEYS(                        XK_2,                      1)
+	TAGKEYS(                        XK_3,                      2)
+	TAGKEYS(                        XK_4,                      3)
+	TAGKEYS(                        XK_5,                      4)
+	TAGKEYS(                        XK_6,                      5)
+	TAGKEYS(                        XK_7,                      6)
+	TAGKEYS(                        XK_8,                      7)
+	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 

@@ -1,34 +1,22 @@
 --- dwm.c
 +++ dwm.c
-@@ -58,7 +58,7 @@
+@@ -238,7 +239,7 @@ static void zoom(const Arg *arg);
  
- /* enums */
- enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
--enum { SchemeNorm, SchemeSel, SchemeLast }; /* color schemes */
-+enum { SchemeNorm, SchemeSel, SchemeUrg, SchemeLast }; /* color schemes */
- enum { NetSupported, NetWMName, NetWMState,
-        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
-        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
-@@ -1537,6 +1537,9 @@ setup(void) {
- 	scheme[SchemeSel].border = drw_clr_create(drw, selbordercolor);
- 	scheme[SchemeSel].bg = drw_clr_create(drw, selbgcolor);
- 	scheme[SchemeSel].fg = drw_clr_create(drw, selfgcolor);
-+	scheme[SchemeUrg].border = drw_clr_create(drw, urgbordercolor);
-+	scheme[SchemeUrg].bg = drw_clr_create(drw, selbgcolor);
-+	scheme[SchemeUrg].fg = drw_clr_create(drw, selfgcolor);
- 	/* init bars */
- 	updatebars();
- 	updatestatus();
-@@ -1982,8 +1985,11 @@ updatewmhints(Client *c) {
- 			wmh->flags &= ~XUrgencyHint;
- 			XSetWMHints(dpy, c->win, wmh);
- 		}
--		else
-+		else {
- 			c->isurgent = (wmh->flags & XUrgencyHint) ? True : False;
-+			if (c->isurgent)
-+				XSetWindowBorder(dpy, c->win, scheme[SchemeUrg].border->pix);
-+		}
- 		if(wmh->flags & InputHint)
- 			c->neverfocus = !wmh->input;
- 		else
+ /* variables */
+ static const char broken[] = "broken";
+-static char stext[256];
++static char stext[1024];
+ static int screen;
+ static int sw, sh;           /* X display screen geometry width, height */
+ static int bh, blw = 0;      /* bar geometry */
+@@ -816,9 +925,7 @@ drawbar(Monitor *m)
+ 
+ 	/* draw status first so it can be overdrawn by tags later */
+ 	if (m == selmon) { /* status is only drawn on selected monitor */
+-		drw_setscheme(drw, scheme[SchemeNorm]);
+-		tw = TEXTW(stext) - lrpad + 2; /* 2px right padding */
+-		drw_text(drw, m->ww - tw, 0, tw, bh, 0, stext, 0);
++		tw = m->ww - drawstatusbar(m, bh, stext);
+ 	}
+ 
+ 	for (c = m->clients; c; c = c->next) {
