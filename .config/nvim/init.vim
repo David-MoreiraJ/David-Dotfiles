@@ -26,15 +26,13 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree' " File explorer
+Plug 'scrooloose/nerdtree' " File explorer inside the editor
 Plug 'ap/vim-css-color' " Displays the colors of Hex color codes
-Plug 'vim-airline/vim-airline' " Status line
-Plug 'vim-airline/vim-airline-themes' " Themes for the status line
+Plug 'nvim-lualine/lualine.nvim' " Status line
 Plug 'ryanoasis/vim-devicons' " Nerd icons for VIM
-Plug 'nekonako/xresources-nvim' " Makes VIM use colors from the .Xresources file
-Plug 'sheerun/vim-polyglot'
-
-"Plug 'morhetz/gruvbox' "Gruvbox theme
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'sheerun/vim-polyglot' " Brings syntax highlighting to more languages than the default
+"Plug 'nekonako/xresources-nvim' " Makes VIM use colors from the .Xresources file
 
 call plug#end()
 
@@ -58,29 +56,62 @@ set scrolloff=4
 set nocompatible
 
 """""""""""""""""""""""""""""""""""""""
+" Keyconfig                           "
+"""""""""""""""""""""""""""""""""""""""
+nnoremap <C-n> :tabnew<CR>
+nnoremap <C-S-n> :gT
+"""""""""""""""""""""""""""""""""""""""
 " NERDTree                            "
 """""""""""""""""""""""""""""""""""""""
 nnoremap <f2> :NERDTreeToggle <cr>
 let g:NERDTreeMinimalUI = 1
+let NERDTreeMapOpenInTab='<ENTER>'
 """""""""""""""""""""""""""""""""""""""
-" Airline                             "
+" Lualine                             "
 """""""""""""""""""""""""""""""''""""""
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
-
-let g:airline_powerline_fonts = 1
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-
-let g:airline_theme = 'onedark'
+lua << END
+require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'auto',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {},
+    always_divide_middle = true,
+    globalstatus = false,
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {''},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {
+  lualine_a = {'filename'},
+  lualine_b = {'filetype'},
+  lualine_c = {'tabs'},
+  lualine_x = {},
+  lualine_y = {},
+  lualine_z = {}
+      },
+  extensions = {}
+}
+END
 """"""""""""""""""""""""""""""""""""""
 " Colorscheme                        "
 """"""""""""""""""""""""""""""""""""""
 "set background=dark
 "let g:gruvbox_contrast_dark='hard'
 "colorscheme gruvbox
-colorscheme xresources
+colorscheme catppuccin
 """"""""""""""""""""""""""""""""""""""
