@@ -25,19 +25,13 @@ _comp_options+=(globdots)		# Include hidden files.
 # Load aliases and shortcuts if existent.
 alias music='mpd && ncmpcpp'
 alias suck='cd ~/Suckless/dwm && sudo make clean install && cd ~'
+alias update-grub='grub-mkconfig -o /boot/grub/grub.cfg'
+alias ls="exa --icons -a"
+alias cat="bat" 
+
 # Autostart
-macchina --theme Helium
+neofetch
 
 # Plugins.
 #source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-#EXPORTS
-export JAVA_HOME='/usr/lib/jvm/java-1.8.0-openjdk/'
-export PATH=$JAVA_HOME/bin:$PATH 
-
-export ANDROID_SDK_ROOT='/opt/android-sdk'
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
-export PATH=$PATH:$ANDROID_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
