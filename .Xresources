@@ -39,38 +39,38 @@ URxvt.depth: 24
 URxvt.iso14755: false
 
 ! special
-*.foreground:   #ffdbb0
-*.background:   #060a0c
-*.cursorColor:  #ffdbb0
+*background: #1E1E2E
+*foreground: #D9E0EE
 
-! black
-*.color0:       #060a0c
-*.color8:       #0d161b
+! Gray
+*color0: #6E6C7E
+*color8: #988BA2
 
-! red
-*.color1:       #fe5e41
-*.color9:       #fe7f69
+! Red
+*color1: #F28FAD
+*color9: #F28FAD
 
-! green
-*.color2:       #b1cc72
-*.color10:      #c0d68d
+! Green
+*color2:  #ABE9B3
+*color10: #ABE9B3
 
-! yellow
-*.color3:       #ffac54
-*.color11:      #ffbc74
+! Yellow
+*color3:   #FAE3B0
+*color11:  #FAE3B0
 
-! blue
-*.color4:       #72c2d6
-*.color12:      #8dcede
+! Blue
+*color4:  #96CDFB
+*color12: #96CDFB
 
-! magenta
-*.color5:       #ed7782
-*.color13:      #f1939c
+! Maguve
+*color5:  #DDB6F2
+*color13: #DDB6F2
 
-! cyan
-*.color6:       #8dd1b9
-*.color14:      #a2dac6
+! Pink
+*color6:  #89DCEB
+*color14: #89DCEB
 
-! white
-*.color7:       #d9bb96
-*.color15:      #ffdbb0
+! Whites
+*color7:  #C3BAC6
+*color15: #D9E0EE
+

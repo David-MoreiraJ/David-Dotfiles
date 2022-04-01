@@ -1,1 +1,1 @@
-dwm
+exec dwm
