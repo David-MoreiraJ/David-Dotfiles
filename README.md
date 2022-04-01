@@ -57,6 +57,10 @@ A fork of Vim, a powerfull and extensible text editor, made even better by the l
 
 A pleasant for the eyes and warm colorscheme, great for long programming sessions.
 
+- Font: [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
+
+A great font that is not only easy to read, but also supports icons and ligatures.
+
 ## Contact
 
 Feel free to leave suggestions or report problems through the [Issue section](https://github.com/David-MoreiraJ/David-Dotfiles/issues), and many thanks for taking your time to read this far!
