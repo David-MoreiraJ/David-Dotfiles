@@ -1,10 +1,9 @@
 #! /bin/sh
 
-slstatus &
+dwmblocks &
 sxhkd &
 xset -dpms s off &
-setxkbmap br &
-picom &
+#setxkbmap br &
+picom --experimental-backends -b &
 xrdb ~/.Xresources &
-feh --bg-scale /home/anon/Imagens/afternoon.jpg &
-st
+feh --bg-scale /home/anon/Imagens/285.png &
