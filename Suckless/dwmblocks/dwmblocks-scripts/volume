@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo "^c#89DCEB^󰕾$(pamixer --get-volume)% "

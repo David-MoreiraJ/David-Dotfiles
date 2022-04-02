@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+echo "^c#F8BD96^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g) " 
