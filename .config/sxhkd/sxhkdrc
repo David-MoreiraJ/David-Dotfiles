@@ -7,3 +7,8 @@ super + KP_Subtract
 super + KP_Add
     sh -c "pactl set-sink-volume 0 +5%"
 
+F11
+    xbacklight -dec 10
+F12
+    xbacklight -inc 10
+
