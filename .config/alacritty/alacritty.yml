@@ -1,0 +1,76 @@
+# Window options
+window:
+  opacity: 0.8
+  padding:
+    x: 5
+    y: 5
+  dimensions:
+    columns: 85 
+    lines: 25
+
+# Scrolling speed
+scrolling:
+  multiplier: 3
+
+selection:
+  save_to_clipboard: true
+
+#Font config
+font:
+  normal:
+    family: Jetbrains Mono Nerd Font
+    style: Medium
+
+  bold:
+    family: Jetbrains Mono Nerd Font
+    style: Bold
+
+  italic:
+    family: Jetbrains Mono Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: Jetbrains Mono Nerd Font
+    style: Bold Italic
+
+  size: 8
+draw_bold_text_with_bright_colors: true
+
+colors:
+  # Default colors
+  primary:
+    background: '#060a0c'
+    foreground: '#ffdbb0'
+
+  # Normal colors
+  normal:
+    black:   '#060a0c'
+    red:     '#fe5e41'
+    green:   '#b1cc72'
+    yellow:  '#ffac54'
+    blue:    '#72c2d6'
+    magenta: '#ed7782'
+    cyan:    '#8dd1b9'
+    white:   '#ffdbb0'
+
+  # Bright colors
+  bright:
+    black:   '#0d161b'
+    red:     '#fe7f69'
+    green:   '#c0d68d'
+    yellow:  '#ffbc74'
+    blue:    '#8dcede'
+    magenta: '#f1939c'
+    cyan:    '#a2dac6'
+    white:   '#d9bb96'
+
+# Cursor style options
+cursor:
+  style:
+    shape: Block
+      #blinking: Always
+      #blink-interval: 750
+
+key_bindings:
+  - { key: C, mods: alt, action: copy}
+  - { key: V, mods: alt, action: paste}
