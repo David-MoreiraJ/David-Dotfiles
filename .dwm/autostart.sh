@@ -1,9 +1,10 @@
 #! /bin/sh
 
-dwmblocks &
+#dwmblocks &
+slstatus &
 sxhkd &
 xset -dpms s off &
 #setxkbmap br &
 picom --experimental-backends -b &
 xrdb ~/.Xresources &
-feh --bg-scale /home/anon/Imagens/285.png &
+feh --bg-max /home/anon/Imagens/006.png &
