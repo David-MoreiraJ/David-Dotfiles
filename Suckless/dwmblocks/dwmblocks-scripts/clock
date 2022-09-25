@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-echo "^c#F28FAD^󰥔 $(date '+%A, %d/%m/%y %H:%M %p') "
