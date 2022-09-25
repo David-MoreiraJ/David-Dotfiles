@@ -30,7 +30,7 @@ alias ls="exa --icons -a"
 alias cat="bat" 
 
 # Autostart
-neofetch
+nitch
 
 # Plugins.
 #source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
