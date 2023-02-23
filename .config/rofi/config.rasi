@@ -9,4 +9,4 @@ configuration{
     display-drun: " Programs ";
 }
 
-@theme "/home/anon/.config/rofi/orange.rasi"
+@theme "/home/anon/.config/rofi/stardustkyun.rasi"

@@ -7,8 +7,8 @@
 * {
     font:   "JetBrainsMono Nerd Font Bold 10";
 
-    bg0:     #1E1E2E;
-    bg1:     #1E1E2E;
+    bg0:     #000f14;
+    bg1:     #000f14;
     fg0:     #D9E0EE;
 
     urgent-color:     #F28FAD;
