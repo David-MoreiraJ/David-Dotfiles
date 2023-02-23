@@ -1,9 +1,9 @@
 # Dotfiles
-My current Arch Linux installation:
-![](Images/DavidPrint1.png)
-
-Old Artix Linux setup, back when I was trying out different init systems:
+My current Arch Linux installation, using Wayland and Hyprland:
 ![](Images/DavidPrint2.png)
+
+Old Arch Linux setup, with X11 and DWM.
+![](Images/DavidPrint1.png)
 
 This repo contains personal dotfiles of my Arch Linux setup for backup purposes and my own future reference.
 
@@ -17,17 +17,17 @@ For short, Dotfiles are text-based configuration files of Unix based systems. Th
 
 ## Softwares that I use in my Linux installation
 
-- Display server: [X server](https://www.x.org/wiki/)
+- Display server: [Wayland](https://wayland.freedesktop.org/)
 
-The most popular display manager in Linux. It works very well overall, but I'm planning to try out wayland too.
+A new display server that aims to replace X11, with a more modern aproach on its core philosophy.
 
-- Window manager: [Dynamic Window Manager](https://dwm.suckless.org/)
+- Window manager: [Hyprland](https://hyprland.org/)
 
-A simple window manager written in C. The reason why I started using DWM was to pratice my C programming, since the only way to configure it is by editting the source code. But it ended up becoming my favorite Window manager.
+A cool Dynamic Tiling Window manager for Wayland, that manages to be at the same time good looking and lightweight.
 
-- Terminal emulator: [Simple Terminal](https://st.suckless.org/)
+- Terminal emulator: [Alacritty](https://alacritty.org/)
 
-It follows the same idea as DWM, it aims to be simple, fast and extensible by edditing the source code, that is written in C. This specific version of ST is a fork of [Luke's build of st](https://github.com/LukeSmithxyz/st).
+A performant and modern terminal emulator written in Rust.
 
 - Terminal shell: [Zshell](https://www.zsh.org/)
 
