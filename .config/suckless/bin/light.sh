@@ -1,0 +1,9 @@
+black=#000f14
+green=#a6e3a1
+white=#eeffff
+grey=#212126
+darkblue=#89b4fa
+red=#f38ba8
+blue=#a0a0b4
+yellow=#f9e2af
+interval=0

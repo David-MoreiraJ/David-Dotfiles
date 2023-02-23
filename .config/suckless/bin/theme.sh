@@ -1,0 +1,1 @@
+source /home/anon/.config/suckless/bin/light.sh

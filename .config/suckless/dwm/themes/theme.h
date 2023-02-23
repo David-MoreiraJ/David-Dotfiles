@@ -1,0 +1,1 @@
+#include "/home/anon/.config/suckless/dwm/themes/light.h"
