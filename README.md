@@ -19,7 +19,7 @@ For short, Dotfiles are text-based configuration files of Unix based systems. Th
 
 - Display server: [Wayland](https://wayland.freedesktop.org/)
 
-A new display server that aims to replace X11, with a more modern aproach on its core philosophy.
+A new display server that aims to replace X11, with a more modern approach on its core philosophy.
 
 - Window manager: [Hyprland](https://hyprland.org/)
 
