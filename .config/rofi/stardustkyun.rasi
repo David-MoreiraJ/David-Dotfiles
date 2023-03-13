@@ -1,8 +1,8 @@
 * {
-	bg: #000f14;
-	fg: #a0a0b4;
-	selbg: #0a191e;
-	selfg: #a0a0b4;
+	bg: #0b0a10;
+	fg: #f1fcf9;
+	selbg: #11101a;
+	selfg: #DF8293;
 
 	background-color: @bg;
 	border-color: @selbg;
