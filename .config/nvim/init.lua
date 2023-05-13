@@ -48,7 +48,8 @@ require('packer').startup(function(use)
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
 
-  use({"catppuccin/nvim", as = "catppuccin"})
+ -- use({"catppuccin/nvim", as = "catppuccin"})
+  use("sainnhe/gruvbox-material")
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
@@ -132,7 +133,7 @@ vim.bo.softtabstop = 4
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd[[colorscheme catppuccin]]
+vim.cmd[[colorscheme gruvbox-material]]
 vim.cmd[[hi Normal ctermbg=NONE guibg=NONE]] -- Transparent Background
 
 -- Set completeopt to have a better completion experience
@@ -381,7 +382,7 @@ local servers = {
   -- rust_analyzer = {},
   -- tsserver = {},
 
-  sumneko_lua = {
+  lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
